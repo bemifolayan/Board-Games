@@ -30,7 +30,9 @@ enum row{
     rowOne,
     rowTwo,
     rowThree,
-    rowFour};
+    rowFour,
+    rowFive,
+    rowSix};
 
 enum col{
     colZero,
