@@ -10,7 +10,7 @@ TicTacToeGame::TicTacToeGame():GameBase(){
     height = 5;
     maxlength = 1;
     trn = 0;
-    for(int i = 0; i < width*height; i++){
+    for(unsigned int i = 0; i < width*height; i++){
         game_piece g = game_piece(noName, "", " ", 1,1);
         pieces.push_back(g);
     }
@@ -19,8 +19,8 @@ TicTacToeGame::TicTacToeGame():GameBase(){
 bool TicTacToeGame :: done(){
     //checking vertical
     int count = 0;
-    for(int i = rowOne; i < rowFour; i++){
-        for(int j = colOne; j < colFour; j++){
+    for(unsigned int i = rowOne; i < rowFour; i++){
+        for(unsigned int j = colOne; j < colFour; j++){
             if(pieces.at(width* j+i).display_ == "X")
                 count++;
             else if(pieces.at(width* j + i).display_ == "O")
@@ -33,8 +33,8 @@ bool TicTacToeGame :: done(){
     }
 
     //checking horizontal
-    for(int i = colOne; i < colFour; i++){
-        for(int j = rowOne; j < rowFour; j++){
+    for(unsigned int i = colOne; i < colFour; i++){
+        for(unsigned int j = rowOne; j < rowFour; j++){
             if(pieces.at(width*i + j).display_ == "X")
                 count++;
             else if(pieces.at(width * i + j).display_ == "0")
@@ -64,8 +64,8 @@ bool TicTacToeGame :: done(){
 }
 //checks to see if the players had a draw
 bool TicTacToeGame :: draw(){
-    for(int i = rowOne; i < colFour; i++){
-        for(int j = colOne; j < colFour; j++){
+    for(unsigned int i = rowOne; i < colFour; i++){
+        for(unsigned int j = colOne; j < colFour; j++){
             if(pieces.at(width *i + j ).display_== " " )
                 return false;
         }

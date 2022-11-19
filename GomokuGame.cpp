@@ -184,7 +184,7 @@ void GomokuGame::print(){
 ostream& operator<<(ostream& o, const GomokuGame & t) {
 
     o << setw(t.maxlength);
-    for (int i = t.height - 2; i >= 1; i--) {
+    for (unsigned int i = t.height - 2; i >= 1; i--) {
         o << i;
         for (unsigned int j = 1; j <= t.width - 2; j++) {
             o << setw(t.maxlength) << t.pieces.at(t.width * i + j).display_ << " ";
