@@ -2,10 +2,6 @@
 // Created by Regan Williamson on 11/16/22.
 //
 
-#ifndef LAB4_FOLAYAN_WILLIAMSON_LAB4_PIECE_H
-#define LAB4_FOLAYAN_WILLIAMSON_LAB4_PIECE_H
-
-#endif //LAB4_FOLAYAN_WILLIAMSON_LAB4_PIECE_H
 #pragma once
 #include <iostream>
 #include <fstream>

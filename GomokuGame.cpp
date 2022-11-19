@@ -15,7 +15,7 @@ GomokuGame:: GomokuGame():GameBase(){
         pieces.push_back(g);
     }
 }
-//tests to see whether any of the players have won the game, returns true if they have and false if the have not
+//tests to see whether any of the players have won the game, returns true if they have and false if they have not
 bool GomokuGame:: done() {
     //row
     int countB = 1;
