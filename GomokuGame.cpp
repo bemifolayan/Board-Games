@@ -15,7 +15,7 @@ GomokuGame:: GomokuGame():GameBase(){
         pieces.push_back(g);
     }
 }
-
+//tests to see whether any of the players have won the game, returns true if they have and false if the have not
 bool GomokuGame:: done() {
     //row
     int countB = 1;
@@ -44,7 +44,7 @@ bool GomokuGame:: done() {
     countB = 1;
     countW = 1;
     for (unsigned int i = rowOne; i <= height - 2; i++) {
-        for (unsigned int j = colOne; j < width - 3; j++) {
+        for (unsigned int j = colOne; j <= width - 3; j++) {
             if (pieces.at(width * j + i).display_ == "B") {
                 if (pieces.at(width * (j + 1) + i).display_ == "B") {
                     countB++;
@@ -124,10 +124,10 @@ bool GomokuGame:: done() {
     return false;
 
 }
-
+//checks to see whether the player have a draw
 bool GomokuGame:: draw(){
-    for(int i = rowOne; i < height; i++){
-        for(int j = colOne; j < width; j++){
+    for(unsigned int i = rowOne; i < height -1; i++){
+        for(unsigned int j = colOne; j < width -1; j++){
             if(pieces.at(width *i + j ).display_== " " )
                 return false;
         }
@@ -137,7 +137,7 @@ bool GomokuGame:: draw(){
     }
     return true;
 }
-
+//keeps track of who's turn it is and changes the display to reflect what has been played
 int GomokuGame :: turn(){
 
     unsigned int xcord;
@@ -164,9 +164,7 @@ int GomokuGame :: turn(){
         return FailedTurn;
     }
 
-    GomokuGame temp;
-    temp.pieces = pieces;
-    cout << temp << endl;
+    print();
     cout << "Player " << p << endl;
     for(int i = 0; i < pieces.size(); i++){
         if(pieces.at(i).display_ == p ){
@@ -176,11 +174,12 @@ int GomokuGame :: turn(){
     trn++;
     return Success;
 }
-
+//print the board
 void GomokuGame::print(){
     cout << *this << endl;
 }
 
+//pushes the board to the ostream
 ostream& operator<<(ostream& o, const GomokuGame & t) {
 
     o << setw(t.maxlength);

@@ -105,10 +105,7 @@ int TicTacToeGame :: turn(){
         return FailedTurn;
     }
 
-
-    TicTacToeGame temp;
-    temp.pieces = pieces;
-    cout << temp << endl;
+    print();
     cout << "Player " << p << endl;
     for(int i = 0; i < pieces.size(); i++){
         if(pieces.at(i).display_ == p ){
@@ -118,11 +115,11 @@ int TicTacToeGame :: turn(){
     trn++;
     return Success;
 }
-
+//prints the board
 void TicTacToeGame::print(){
     cout << *this << endl;
 }
-
+//pushes the board to the ostream
 ostream& operator<<(ostream& o, const TicTacToeGame & t) {
 
     o << setw(t.maxlength);
