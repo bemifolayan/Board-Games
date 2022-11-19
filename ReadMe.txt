@@ -29,4 +29,4 @@ Case 7: No program arguments
 Case 8: Badly formed command lines
     When the program argument is "TicTac", the program returns "Please make the program argument TicTacToe or Gomoku"
 Case 9: Player tries to input an already occupied coordinate
-    When the player tries to input (1,1) twice, the program prompts the user to input another coordinate or wuit after the second try.
+    When the player tries to input (1,1) twice, the program prompts the user to input another coordinate or quit after the second try.
