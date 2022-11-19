@@ -64,38 +64,6 @@ bool GomokuGame:: done() {
             }
         }
 
-
-    //diagonal going up to right
-    /*
-
-    for(unsigned int i = rowOne; i <= 15; i++) {
-        for (unsigned int j = colOne; j <= 15; j++) {
-            if(pieces.at(width*j+i).display_ == "B" && pieces.at(width*j+i+20).display_ == "B" && pieces.at(width*j+i+40).display_ == "B"
-            && pieces.at(width*j+i+60).display_ == "B" && pieces.at(width*j+i+80).display_ == "B"){
-                return true;
-            }
-            else if(pieces.at(width*j+i).display_ == "W" && pieces.at(width*j+i+20).display_ == "W" && pieces.at(width*j+i+40).display_ == "W"
-                   && pieces.at(width*j+i+60).display_ == "W" && pieces.at(width*j+i+80).display_ == "B"){
-                return true;
-            }
-        }
-    }
-
-    //diagonal going up to left
-for(unsigned int i = rowOne; i <= 15; i++) {
-    for (unsigned int j = 5; j <= 15; j++) {
-        if(pieces.at(width*j+i).display_ == "B" && pieces.at(width*j+i+18).display_ == "B" && pieces.at(width*j+i+36).display_ == "B"
-           && pieces.at(width*j+i+54).display_ == "B" && pieces.at(width*j+i+72).display_ == "B"){
-            return true;
-        }
-        else if(pieces.at(width*j+i).display_ == "W" && pieces.at(width*j+i+18).display_ == "W" && pieces.at(width*j+i+36).display_ == "W"
-                && pieces.at(width*j+i+54).display_ == "W" && pieces.at(width*j+i+72).display_ == "B"){
-            return true;
-        }
-    }
-}*/
-
-
     //diagonal going left
 
     countB  = 1;
@@ -195,7 +163,6 @@ int GomokuGame :: turn(){
     else{
         return FailedTurn;
     }
-
 
     GomokuGame temp;
     temp.pieces = pieces;

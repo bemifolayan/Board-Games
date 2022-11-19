@@ -30,11 +30,11 @@ int GameBase:: play(){
         return Success;
     }
     else if (t == QuitGame){
-        cout << "Player has quit" << trn << "turn were made" << endl;
+        cout << "Player has quit. " << trn << " turns were made." << endl;
         return QuitGame;
     }
     else {
-        cout << "Draw." << trn << " moves were played and no winning moves remain" << endl;
+        cout << "Draw." << trn << " moves were played and no winning moves remain." << endl;
         return Draw;
     }
 }
@@ -42,7 +42,7 @@ int GameBase:: play(){
 int GameBase :: prompt( unsigned int &j, unsigned int &k) {
     while (true) {
         string x;
-        cout << "quit or Input Coordinate";
+        cout << "Input Coordinate or quit";
         cin >> x;
         if (x == "quit") {
             return QuitGame;
