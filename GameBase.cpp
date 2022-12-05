@@ -72,7 +72,8 @@ int GameBase :: prompt( unsigned int &j, unsigned int &k) {
 }
 
 GameBase* GameBase::obj(int a, char* arr[]){
-    GameBase* game;
+    // YL - game could potentially be uninitiailized
+    GameBase* game = NULL;
     if(a == expectedCommandLineNum){
         string s = arr[inputFileName];
         if(s == "TicTacToe"){
@@ -84,7 +85,7 @@ GameBase* GameBase::obj(int a, char* arr[]){
             game = new GomokuGame();
         }
     }
-
+    // YL - what if a != expectedCommandLineNum? What do you return then?
     return game;
 }
 

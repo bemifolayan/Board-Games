@@ -3,6 +3,9 @@
 //
 
 #include "GomokuGame.h"
+// YL - I had to add this for setw to be recognized
+#include <iomanip>
+
 GomokuGame:: GomokuGame():GameBase(){
     width = 21;
     height = 21;

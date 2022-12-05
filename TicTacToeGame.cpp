@@ -4,6 +4,8 @@
 
 #include "TicTacToeGame.h"
 #include "GameBase.h"
+// YL - I had to add this for setw to be recognized
+#include <iomanip>
 
 TicTacToeGame::TicTacToeGame():GameBase(){
     width = 5;
